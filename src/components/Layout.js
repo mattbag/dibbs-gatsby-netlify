@@ -4,7 +4,7 @@ import React from "react";
 import Helmet from "react-helmet";
 
 import Navbar from "../components/Navbar";
-import Socialbar from "../components/Socialbar";
+
 // import './all.sass'
 import "./master.css";
 
@@ -15,10 +15,7 @@ const outernMost = css(tw`antialiased`);
 const TemplateWrapper = ({ children }) => (
   <div className={outernMost}>
     <Helmet title="Home | Gatsby + Netlify CMS" />
-    {/* <div> */}
-    {/* <Socialbar /> */}
     <Navbar />
-    {/* </div> */}
     <div className={layoutWrap}>{children}</div>
   </div>
 );

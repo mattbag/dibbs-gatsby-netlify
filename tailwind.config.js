@@ -383,7 +383,7 @@ module.exports = {
   */
 
 	borderWidths: {
-		default: '1px',
+		default: '2px',
 		'0': '0',
 		'2': '2px',
 		'4': '4px',
@@ -407,7 +407,7 @@ module.exports = {
   |
   */
 
-	borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
+	borderColors: global.Object.assign({ default: colors['white'] }, colors),
 
 	/*
   |-----------------------------------------------------------------------------

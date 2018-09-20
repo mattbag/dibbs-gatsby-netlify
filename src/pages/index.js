@@ -15,16 +15,17 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
     const heading = css(tw`text-pink text-center`);
     // const bandImg = css(tw`max-w-md mx-auto my-2 block`);
+    const block = css(tw`py-4 md:py-8`);
     return (
       <Layout>
         <section className="section">
-          <div className="container">
-          <hr style={{width:100, margin:'20 auto'}}/>
-          {/* <img src={band} alt="Dive Bell" className={bandImg}/> */}
-          <h2 className={heading}>Latest Video</h2>
-          <Video videoSource={''}/>
+          <div className={block}>
+            <hr style={{ width: 60, margin: '20 auto' }} />
+            {/* <img src={band} alt="Dive Bell" className={bandImg}/> */}
+            <h2 className={heading}>Latest Video</h2>
+            <Video videoSource={''} />
             <div className="content">
-              <hr style={{width:100, margin:'20 auto'}}/>
+              <hr style={{ width: 60, margin: '20 auto' }} />
               <h2 className={heading}>Latest Stories</h2>
             </div>
             {posts.map(({ node: post }) => (
@@ -42,7 +43,7 @@ export default class IndexPage extends React.Component {
                   <Link className="has-text-primary" to={post.fields.slug}>
                     {post.frontmatter.title}
                   </Link>
-                  <br/>
+                  <br />
                   <span> &bull; </span>
                   <small>{post.frontmatter.date}</small>
                 </p>

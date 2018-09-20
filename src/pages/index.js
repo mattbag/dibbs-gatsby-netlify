@@ -1,19 +1,23 @@
+/* global tw */
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
+import { css } from 'emotion';
+
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-
+    const heading = css(tw`my-0 text-xl leading-tight bg-yellow`);
     return (
       <Layout>
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+              <h1 className={heading}>Latest Stories</h1>
             </div>
             {posts
               .map(({ node: post }) => (

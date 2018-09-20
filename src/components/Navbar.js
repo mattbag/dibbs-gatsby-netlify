@@ -10,10 +10,10 @@ const navlink = css(
   tw`my-0 text-lg leading-tight text-pink-dark no-underline uppercase mx-2 inline-block`
 );
 const navflex = css(tw`flex justify-around max-w-md mx-auto`);
+const navwrap = css(tw`p-4 sticky pin-t bg-black`);
 
 const Navbar = () => (
-  <nav className="navbar is-transparent" style={{ 
-    padding: '.3rem 4vw', position:'sticky', top:0, backgroundColor:'black', zIndex:9 }}>
+  <nav className={navwrap} style={{ zIndex:9 }}>
     <div className="container">
       <div className="navbar-brand" style={{textAlign:'center'}}>
         <Link to="/" className={navlink}>

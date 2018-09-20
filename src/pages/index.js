@@ -4,6 +4,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
+import Video from "../components/Video";
 import { css } from "emotion";
 
 // import band from '../img/unnamed-1.png'
@@ -20,6 +21,8 @@ export default class IndexPage extends React.Component {
           <div className="container">
           <hr style={{width:100, margin:'20 auto'}}/>
           {/* <img src={band} alt="Dive Bell" className={bandImg}/> */}
+          <h2 className={heading}>Latest Video</h2>
+          <Video videoSource={''}/>
             <div className="content">
               <hr style={{width:100, margin:'20 auto'}}/>
               <h2 className={heading}>Latest Stories</h2>

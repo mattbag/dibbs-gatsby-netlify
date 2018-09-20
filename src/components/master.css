@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box
+}
+
 html {
   padding: 3vw;
   background-color: pink;
@@ -8,7 +12,7 @@ body {
   margin: 0;
   color: #fefefe;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  /* box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.35); */
+  /* box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.35); */
   /* box-shadow: 0 0 2px 5px rgb(17, 0, 0); */
 }
 

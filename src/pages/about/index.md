@@ -1,19 +1,15 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: About our values
+title: Bio
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+### Ever found your favourite bar? 
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+Where the hallways are dark and long, shafts of light flittering the smoke as you walk along til you realise it's not a bar you've actually walked into a 1920s ballroom hidden in a suburban lot.
+As the smoke clears a little you hear a wall of sound wash over and inside you. Remnants of Portishead, Madonna, Nine Inch Nails and King Tubby swirl through the space.
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+### This is Dive Bell. Welcome.
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+The band is comprised of 4 divine beings of music who have come together to share their immaculate sounds.Like a well crafted gin, you can't help but fall in love with their melodies and the dreamscapes created in your mind will stay as a lingering memory for all time.
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+> - Sally Quade

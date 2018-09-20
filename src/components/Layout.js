@@ -9,7 +9,7 @@ import Navbar from "../components/Navbar";
 import "./master.css";
 
 const layoutWrap = css(tw`max-w-2xl mx-auto px-4`);
-const outernMost = css(tw`antialiased`);
+const outernMost = css(tw`antialiased p-4`);
 // const sticky = css(tw`sticky pin-t bg-white z-10`);
 
 const TemplateWrapper = ({ children }) => (

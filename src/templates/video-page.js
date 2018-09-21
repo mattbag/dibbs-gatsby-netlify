@@ -4,8 +4,9 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const VideosPageTemplate = ({ title, content, contentComponent }) => {
+export const VideosPageTemplate = ({ title, videolist, content, contentComponent }) => {
   const PageContent = contentComponent || Content
+  console.log(videolist)
 
   return (
     <section className="section section--gradient">
@@ -41,6 +42,7 @@ const VideosPage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
+        videos={post.videolist}
       />
     </Layout>
   )

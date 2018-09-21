@@ -1,6 +1,7 @@
 ---
 templateKey: about-page
 title: Videos
+path: /videos
 videolist:
   - videoUrl: 'https://www.youtube.com/embed/t5xhya-grlU'
 ---

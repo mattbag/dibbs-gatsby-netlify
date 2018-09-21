@@ -1,7 +1,7 @@
 ---
 templateKey: about-page
 title: Videos
-videolist:
+Videos:
   - videoUrl: 'https://www.youtube.com/embed/t5xhya-grlU'
 ---
 ### Ever found your favourite bar? 

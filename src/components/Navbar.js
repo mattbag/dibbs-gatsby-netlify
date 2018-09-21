@@ -17,14 +17,12 @@ const Navbar = () => (
     <div className="container">
       <div className="navbar-brand" style={{textAlign:'center'}}>
         <Link to="/" className={navlink}>
-          {/* <figure className="image">
-            <img src={logo} alt="Kaldi" style={{ width: "88px" }} />
-          </figure> */}
+          
           <h1 className={title}>Dive bell</h1>
         </Link>
       </div>
       <div className={navflex} style={{justifyContent:'space-evenly'}}>
-        <Link className={navlink} to="/products">Dates</Link>
+        <Link className={navlink} to="/dates">Dates</Link>
         <Link className={navlink} to="/about">Bio</Link>
         <Link className={navlink} to="/videos">Videos</Link>
         {/* <Link className={navlink} to="/blog">Blog</Link> */}

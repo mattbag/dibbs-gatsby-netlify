@@ -44,7 +44,7 @@ class Video extends Component {
           >
             <div
               className={video.icon}
-              style={{ width: 200 }}
+              style={{ height: "50%" }}
               dangerouslySetInnerHTML={{ __html: video.svg }}
             />
           </div>

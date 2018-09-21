@@ -1,8 +1,9 @@
 ---
-templateKey: about-page
+templateKey: video-page
 title: Videos
 path: /videos
 videolist:
+  - videoUrl: 'https://www.youtube.com/embed/t5xhya-grlU'
   - videoUrl: 'https://www.youtube.com/embed/t5xhya-grlU'
 ---
 ### Ever found your favourite bar? 

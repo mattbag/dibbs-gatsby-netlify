@@ -19,6 +19,7 @@ const TemplateWrapper = ({ children }) => (
     <Socialbar />
     <Navbar />
     <div className={layoutWrap}>{children}</div>
+    <Socialbar />
   </div>
 );
 

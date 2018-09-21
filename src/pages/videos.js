@@ -1,4 +1,4 @@
-/* global tw */
+// /* global tw */
 
 import React from "react";
 import PropTypes from "prop-types";
@@ -6,20 +6,20 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Video from "../components/Video";
 
-import { css } from "emotion";
+// import { css } from "emotion";
 
 export default class VideoSpage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
-    const heading = css(tw`text-pink text-center`);
+    // const heading = css(tw`text-pink text-center`);
     return (
       <Layout>
         <section className="section">
           <div className="container">
-            <div className="content">
+            {/* <div className="content">
               <h2 className={heading}>All the videos</h2>
-            </div>
+            </div> */}
             {posts.map(({ node: post }) => (
               <div
                 className="content"

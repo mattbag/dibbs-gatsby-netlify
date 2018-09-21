@@ -205,7 +205,7 @@ module.exports = {
 			'sans-serif'
 		],
 		serif: [
-			'Playfair Display SC',
+			'Cormorant Garamond',
 			'Constantia',
 			'Lucida Bright',
 			'Lucidabright',

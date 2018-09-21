@@ -1,5 +1,5 @@
 ---
-templateKey: 'about-page'
+templateKey: 'video-page'
 path: /videos
 title: Videos
 ---

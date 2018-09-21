@@ -58,6 +58,9 @@ export const VideosPageQuery = graphql`
       html
       frontmatter {
         title
+        videolist{
+          videoUrl
+        }
       }
     }
   }

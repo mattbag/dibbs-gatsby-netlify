@@ -15,7 +15,7 @@ const outernMost = css(tw`p-4`);
 
 const TemplateWrapper = ({ children }) => (
   <div className={outernMost} style={{minHeight:'90vh'}}>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
+    <Helmet title="DIVE BELL" />
     <Socialbar />
     <Navbar />
     <div className={layoutWrap}>{children}</div>

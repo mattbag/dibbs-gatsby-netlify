@@ -26,7 +26,7 @@ const Navbar = () => (
       <div className={navflex}>
         <Link className={navlink} to="/about">Bio</Link>
         <Link className={navlink} to="/products">Dates</Link>
-        <Link className={navlink} to="/products">Videos</Link>
+        <Link className={navlink} to="/videos">Videos</Link>
         <Link className={navlink} to="/blog">Blog</Link>
       </div>
       <div />

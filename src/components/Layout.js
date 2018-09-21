@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 
 // import './all.sass'
 import "./master.css";
+import Socialbar from "./SocialBar";
 
 const layoutWrap = css(tw`max-w-2xl mx-auto px-4`);
 const outernMost = css(tw`antialiased p-4`);
@@ -15,6 +16,7 @@ const outernMost = css(tw`antialiased p-4`);
 const TemplateWrapper = ({ children }) => (
   <div className={outernMost}>
     <Helmet title="Home | Gatsby + Netlify CMS" />
+    <Socialbar />
     <Navbar />
     <div className={layoutWrap}>{children}</div>
   </div>

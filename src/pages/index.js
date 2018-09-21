@@ -8,22 +8,26 @@ import Video from "../components/Video";
 import { css } from "emotion";
 
 // import band from '../img/unnamed-1.png'
-
+const heading = css(tw`text-pink text-center text-3xl`);
+// const bandImg = css(tw`max-w-md mx-auto my-2 block`);
+const block = css(tw`py-4 md:py-8`);
+const blog = {
+  postLink: css(tw`serif`),
+}
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
-    const heading = css(tw`text-pink text-center`);
-    // const bandImg = css(tw`max-w-md mx-auto my-2 block`);
-    const block = css(tw`py-4 md:py-8`);
     return (
       <Layout>
         <section className="section">
           <div className={block}>
-            <hr style={{ width: 60, margin: '20 auto' }} />
             {/* <img src={band} alt="Dive Bell" className={bandImg}/> */}
+
+            <hr style={{ width: 60, margin: '20 auto' }} />
             <h2 className={heading}>Latest Video</h2>
             <Video videoSource={''} />
+
             <div className="content">
               <hr style={{ width: 60, margin: '20 auto' }} />
               <h2 className={heading}>Latest Stories</h2>
@@ -40,7 +44,7 @@ export default class IndexPage extends React.Component {
                 key={post.id}
               >
                 <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
+                  <Link className={blog.postLink} to={post.fields.slug}>
                     {post.frontmatter.title}
                   </Link>
                   <br />

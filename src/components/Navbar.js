@@ -4,12 +4,12 @@ import React from "react";
 import { Link } from "gatsby";
 
 const title = css(
-  tw`my-0 text-xl md:text-4xl leading-tight text-pink text-center`
+  tw`my-0 text-xl md:text-5xl leading-tight text-pink text-center`
 );
 const navlink = css(
-  tw`my-0 text-lg leading-tight text-pink-dark no-underline uppercase mx-2 inline-block`
+  tw`my-0 text-lg leading-tight text-pink-light no-underline uppercase mx-2 inline-block`
 );
-const navflex = css(tw`flex justify-around max-w-md mx-auto`);
+const navflex = css(tw`flex justify-around max-w-sm mx-auto`);
 const navwrap = css(tw`p-4 sticky pin-t bg-black`);
 
 const Navbar = () => (

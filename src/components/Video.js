@@ -19,13 +19,13 @@ class Video extends Component {
   }
   componentDidMount(){
     // this.setState({url: this.props.url})
-    this.setState({url: 'https://www.youtube.com/embed/t5xhya-grlU'})
+    // this.setState({url: 'https://www.youtube.com/embed/t5xhya-grlU'})
   }
   render() {
     return (
       <div className={wrap} style={{ paddingBottom: '48%', border: '2px solid' }}>
         {/* <iframe className={iframe} src={this.state.url} frameBorder="0"></iframe> */}
-        <iframe className={iframe} src={this.state.url} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+        <iframe title={this.props.url} className={iframe} src={this.state.url} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
       </div>
     );
   }

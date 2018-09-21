@@ -42,6 +42,18 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/videos/index.md"
+        label: "Videos"
+        name: "videos"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Videos List"
+            name: "Videos"
+            widget: "list"
+            fields:
+              - {label: Video Embed Url, name: videoUrl, widget: string}
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"

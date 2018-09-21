@@ -12,10 +12,11 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <div className="section">
+            <div className="section" style={{maxWidth:800,margin:'auto', padding:'60 0'}}>
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
+              <hr style={{ width: 100, margin: 0 }} />
               <PageContent className="content" content={content} />
             </div>
           </div>

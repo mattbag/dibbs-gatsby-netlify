@@ -12,4 +12,4 @@ As the smoke clears a little you hear a wall of sound wash over and inside you. 
 
 The band is comprised of 4 divine beings of music who have come together to share their immaculate sounds.Like a well crafted gin, you can't help but fall in love with their melodies and the dreamscapes created in your mind will stay as a lingering memory for all time.
 
-> - Sally Quade
+> Sally Quade

@@ -12,7 +12,7 @@ const heading = css(tw`text-pink text-center text-3xl`);
 // const bandImg = css(tw`max-w-md mx-auto my-2 block`);
 const block = css(tw`py-4 md:py-8`);
 const blog = {
-  postLink: css(tw`serif`),
+  postLink: css(tw`serif text-md`),
 }
 export default class IndexPage extends React.Component {
   render() {

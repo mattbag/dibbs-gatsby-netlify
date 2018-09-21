@@ -10,11 +10,11 @@ import "./master.css";
 import Socialbar from "./SocialBar";
 
 const layoutWrap = css(tw`max-w-2xl mx-auto px-4`);
-const outernMost = css(tw`antialiased p-4`);
+const outernMost = css(tw`p-4`);
 // const sticky = css(tw`sticky pin-t bg-white z-10`);
 
 const TemplateWrapper = ({ children }) => (
-  <div className={outernMost}>
+  <div className={outernMost} style={{minHeight:'90vh'}}>
     <Helmet title="Home | Gatsby + Netlify CMS" />
     <Socialbar />
     <Navbar />

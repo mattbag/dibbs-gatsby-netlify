@@ -49,7 +49,7 @@ export default class IndexPage extends React.Component {
                 <div
                   className="content"
                   style={{
-                    border: "1px solid pink",
+                    border: "1px solid white",
                     padding: "1rem 1.5rem",
                     margin: "0 auto 2rem auto",
                     maxWidth: 400
@@ -67,7 +67,20 @@ export default class IndexPage extends React.Component {
                   <p>
                     {post.excerpt}
                     <br />
-
+                    {post.frontmatter.eventUrl && (
+                      <a
+                        style={{
+                          borderBottom: "2px dashed white",
+                          padding: ".35rem .7rem",
+                          marginRight: "1rem"
+                        }}
+                        href={post.frontmatter.eventUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Save the date!
+                      </a>
+                    )}
                     <Link className="button is-small" to={post.fields.slug}>
                       Keep Reading →
                     </Link>
@@ -81,7 +94,7 @@ export default class IndexPage extends React.Component {
               <div
                 className="content"
                 style={{
-                  border: "1px solid pink",
+                  border: "1px solid white",
                   padding: "1rem 1.5rem",
                   margin: "0 auto 2rem auto",
                   maxWidth: 400
@@ -159,6 +172,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
+            eventUrl
             date(formatString: "MMMM DD, YYYY")
           }
         }

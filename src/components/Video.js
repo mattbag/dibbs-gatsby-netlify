@@ -35,7 +35,6 @@ class Video extends Component {
         className={video.wrap}
         style={{ paddingBottom: "48%", border: "2px solid" }}
       >
-        {/* <iframe className={iframe} src={this.state.url} frameBorder="0"></iframe> */}
         {!this.state.play ? (
           <div
             onClick={this.playVideo}

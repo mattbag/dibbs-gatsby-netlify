@@ -7,27 +7,30 @@ import Layout from "../components/Layout";
 
 import { css } from "emotion";
 
+const date = {
+  wrap: css(tw`p-4 md:px-8 mb-4 max-w-lg mx-auto `),
+  heading: css(tw`text-pink text-center`)
+};
+
 export default class DatesPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
-    const heading = css(tw`text-pink text-center`);
+
     return (
       <Layout>
         <section className="section">
           <div className="container">
             <div className="content">
-              <h2 className={heading}>All the Dates</h2>
-              <hr style={{ width: 60, margin: '20 auto' }} />
-              <br/>
+              <h2 className={date.heading}>All the Dates</h2>
+              <hr style={{ width: 60, margin: "20 auto" }} />
+              <br />
             </div>
             {posts.map(({ node: post }) => (
               <div
-                className="content"
+                className={date.wrap}
                 style={{
-                  border: "1px solid #eaecee",
-                  padding: "2em 4em",
-                  marginBottom: "2em",
+                  border: "1px solid #fff"
                 }}
                 key={post.id}
               >
@@ -35,14 +38,29 @@ export default class DatesPage extends React.Component {
                   <Link className="has-text-primary" to={post.fields.slug}>
                     {post.frontmatter.title}
                   </Link>
-                  <br/>
-                  <span> &bull; </span>
+                  <br />
+                  <span> &bull; ON: </span>
                   <small>{post.frontmatter.date}</small>
                 </h2>
                 <p>
                   {post.excerpt}
                   <br />
                   <br />
+
+                  {post.frontmatter.eventUrl && (
+                    <a
+                      style={{
+                        borderBottom: "2px dashed white",
+                        padding: ".35rem .7rem",
+                        marginRight: "1rem"
+                      }}
+                      href={post.frontmatter.eventUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Save the date!
+                    </a>
+                  )}
                   <Link className="button is-small" to={post.fields.slug}>
                     Keep Reading →
                   </Link>
@@ -80,6 +98,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
+            eventUrl
             date(formatString: "MMMM DD, YYYY")
           }
         }

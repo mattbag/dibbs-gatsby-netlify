@@ -67,20 +67,7 @@ export default class IndexPage extends React.Component {
                   <p>
                     {post.excerpt}
                     <br />
-                    {post.frontmatter.eventUrl && (
-                      <a
-                        style={{
-                          borderBottom: "2px dashed white",
-                          padding: ".35rem .7rem",
-                          marginRight: "1rem"
-                        }}
-                        href={post.frontmatter.eventUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Save the date!
-                      </a>
-                    )}
+
                     <Link className="button is-small" to={post.fields.slug}>
                       Keep Reading →
                     </Link>
@@ -113,6 +100,20 @@ export default class IndexPage extends React.Component {
                   {post.excerpt}
                   <br />
                   <br />
+                  {post.frontmatter.eventUrl && (
+                    <a
+                      style={{
+                        borderBottom: "2px dashed white",
+                        padding: ".35rem .7rem",
+                        marginRight: "1rem"
+                      }}
+                      href={post.frontmatter.eventUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Save the date!
+                    </a>
+                  )}
                   <Link className="button is-small" to={post.fields.slug}>
                     Keep Reading →
                   </Link>

@@ -68,6 +68,7 @@ collections:
             widget: "list"
             fields:
               - {label: Video Embed Url, name: videoUrl, widget: string}
+              - {label: Video Image, name: videoImage, widget: image}
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"

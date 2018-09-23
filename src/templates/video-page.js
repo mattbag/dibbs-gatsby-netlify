@@ -13,7 +13,7 @@ export const VideosPageTemplate = ({
 }) => {
   const PageContent = contentComponent || Content;
 
-  const Hr = <hr style={{ width: 100, margin: 0 }} />;
+  const Hr = <hr style={{ width: 100, margin: '0 auto' }} />;
 
   return (
     <section className="section section--gradient">

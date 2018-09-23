@@ -22,8 +22,13 @@ export default class IndexPage extends React.Component {
   render() {
     const USE_BLOG = false;
     const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+    const { edges: posts } = data.posts;
     const { edges: dates } = data.dates;
+    const { edges: hp } = data.hp;
+    const homepage = hp[0].node.frontmatter
+
+    console.log(homepage)
+
     return (
       <Layout>
         <section className="section">
@@ -37,7 +42,7 @@ export default class IndexPage extends React.Component {
 
             <div className="content">
               <Hr />
-              <br/>
+              <br />
               {/* <h2 className={heading}>Bio</h2> */}
 
               <img src={poster} alt="Dive Bell" className={bandImg} />
@@ -116,7 +121,7 @@ export default class IndexPage extends React.Component {
                     </a>
                   )}
                   <Link className="button is-small" to={post.fields.slug}>
-                    More 
+                    More
                   </Link>
                 </p>
               </div>
@@ -139,7 +144,18 @@ IndexPage.propTypes = {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(
+    hp: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/homepage.md/"}}) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            description
+          }
+        }
+      }
+    }
+    posts: allMarkdownRemark(
       limit: 3
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "blog-post" } } }

@@ -76,7 +76,8 @@ DatePostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.instanceOf(Helmet)
+  // helmet: PropTypes.instanceOf(Helmet)
+  helmet: PropTypes.any
 };
 
 const DatePost = ({ data }) => {
@@ -88,7 +89,7 @@ const DatePost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
-        helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
+        helmet={<Helmet title={`${post.frontmatter.title} | DIVE BELL`} />}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         video={post.frontmatter.videoUrl}

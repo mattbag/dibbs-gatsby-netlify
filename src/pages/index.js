@@ -37,7 +37,8 @@ export default class IndexPage extends React.Component {
 
             <div className="content">
               <Hr />
-              <h2 className={heading}>Bio</h2>
+              <br/>
+              {/* <h2 className={heading}>Bio</h2> */}
 
               <img src={poster} alt="Dive Bell" className={bandImg} />
               <br />
@@ -115,7 +116,7 @@ export default class IndexPage extends React.Component {
                     </a>
                   )}
                   <Link className="button is-small" to={post.fields.slug}>
-                    Keep Reading →
+                    More 
                   </Link>
                 </p>
               </div>

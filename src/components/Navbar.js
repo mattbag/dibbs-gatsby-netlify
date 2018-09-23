@@ -4,12 +4,12 @@ import React from "react";
 import { Link } from "gatsby";
 
 const title = css(
-  tw`my-0 text-2xl md:text-5xl leading-none text-pink text-center`
+  tw`my-0 text-5xl leading-none text-pink tracking-wide text-center`
 );
 const navlink = css(
   tw`my-0 text-lg leading-tight text-pink-light no-underline uppercase mx-2 inline-block`
 );
-const navflex = css(tw`flex justify-around max-w-sm mx-auto`);
+const navflex = css(tw`flex justify-around max-w-sm mx-auto relative`);
 const navwrap = css(tw`p-2 sticky pin-t bg-black`);
 
 const Navbar = () => (
@@ -20,7 +20,7 @@ const Navbar = () => (
           <h1 className={title}>Dive bell</h1>
         </Link>
       </div>
-      <div className={navflex} style={{ justifyContent: "space-evenly" }}>
+      <div className={navflex} style={{ justifyContent: "space-evenly",right: -5 }}>
         <Link className={navlink} to="/dates">
           Dates
         </Link>

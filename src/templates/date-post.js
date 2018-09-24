@@ -30,10 +30,10 @@ export const DatePostTemplate = ({
       {helmet || ""}
       
           <div className="column is-10 is-offset-1">
-            <h2 className="title is-size-2 has-text-weight-bold is-bold-light">
+            <h2>
               {title}
             </h2>
-
+            <hr style={{ width: 100 }} />
             {
               video.videoSource &&
               <Video videoSource={video.videoSource} poster={video.videoImage} />

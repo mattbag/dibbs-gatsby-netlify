@@ -47,8 +47,9 @@ const Socialbar = () => (
     {icons.map(i =>{
       const checkIcon = data.hp.edges[0].node.frontmatter.socials
       if(!checkIcon[i.name+'_link']) return null
+      
       return <a key={`icon_${i.name}`} rel="noopener noreferrer" target="_blank" href={checkIcon[i.name+'_link']} className={social.icon} style={{ height: 20, width: 20 }} dangerouslySetInnerHTML={{ __html: i.svg }}></a>
-    }
+      }
     )}
   </div>
   )}

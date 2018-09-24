@@ -137,7 +137,10 @@ IndexPage.propTypes = {
     })
   })
 };
-
+// https://www.npmjs.com/package/gatsby-plugin-netlify-cms-paths
+// https://blog.alexluong.com/generate-gatsby-image-sharp-from-an-image-url/
+// https://github.com/gatsbyjs/gatsby/issues/2995#issuecomment-408072399
+// https://github.com/gatsbyjs/gatsby/issues/4769
 export const pageQuery = graphql`
   query IndexQuery {
     hp: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/homepage.md/"}}) {
@@ -149,11 +152,6 @@ export const pageQuery = graphql`
             description
             heading
             image
-            socials {
-              email_link
-              facebook_link
-              music_link
-            }
             video{
               videoImage
               videoSource

@@ -13,7 +13,7 @@ export const VideosPageTemplate = ({
 }) => {
   const PageContent = contentComponent || Content;
 
-  const Hr = <hr style={{ width: 100, margin: '0 auto' }} />;
+  const Hr = margin => <hr style={{ width: 100, margin: margin }} />;
 
   return (
     <section className="section section--gradient">
@@ -24,17 +24,17 @@ export const VideosPageTemplate = ({
               className="section"
               style={{ maxWidth: 800, margin: "auto", padding: "60 0" }}
             >
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+              <h2>
                 {title}
               </h2>
-              {Hr}
+              {Hr('0')}
               <PageContent className="content" content={content} />
 
               {videos.map((v,i) => (
                 <Video videoSource={v.videoUrl} poster={v.videoImage} key={`listvideo_${i}`} />
               ))}
 
-              {Hr}
+              {Hr('0 auto')}
             </div>
           </div>
         </div>

@@ -34,6 +34,7 @@ const Socialbar = () => (
                 facebook_link
                 music_link
                 instagram_link
+                youtube_link
               }
             }
           }

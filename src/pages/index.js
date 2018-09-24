@@ -7,7 +7,7 @@ import Layout from "../components/Layout";
 import Video from "../components/Video";
 import { css } from "emotion";
 
-const heading = css(tw`text-pink text-center text-3xl my-6`);
+const heading = css(tw`text-pink text-center text-4xl my-6`);
 const bandImg = css(tw`w-md mx-auto my-2 block`);
 const block = css(tw`py-4 md:py-8`);
 const blog = {

@@ -4,7 +4,7 @@ import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
 
 const title = css(
-  tw`my-0 text-5xl leading-none text-pink tracking-wide text-center`
+  tw`my-0 text-4xl md:text-5xl leading-none text-pink tracking-wide text-center`
 );
 const navlink = css(
   tw`my-0 text-lg leading-tight text-pink-light no-underline uppercase mx-2 inline-block`

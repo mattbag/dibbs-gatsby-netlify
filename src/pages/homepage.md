@@ -1,4 +1,5 @@
 ---
+use_blog: false
 title: Homepage
 image: /img/unnamed-1.png
 video:

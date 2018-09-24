@@ -24,16 +24,18 @@ export default class BlogPage extends React.Component {
                 className="content"
                 style={{
                   border: "1px solid #eaecee",
-                  padding: "2em 4em",
-                  marginBottom: "2em",
-                  backgroundColor: "rgb(17, 0, 0)"
+                  padding: "2rem 3rem",
+                  maxWidth: '40em',
+                  margin: '2rem auto'
                 }}
                 key={post.id}
               >
-                <p>
+              <h2>
                   <Link className="has-text-primary" to={post.fields.slug}>
                     {post.frontmatter.title}
                   </Link>
+              </h2>
+                <p>
                   <span> &bull; </span>
                   <small>{post.frontmatter.date}</small>
                 </p>
@@ -47,6 +49,7 @@ export default class BlogPage extends React.Component {
                 </p>
               </div>
             ))}
+            <hr style={{width:100, margin:'auto'}}/>
           </div>
         </section>
       </Layout>

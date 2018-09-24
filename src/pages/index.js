@@ -18,12 +18,12 @@ const Hr = () => <hr style={{ width: 60, margin: "20 auto" }} />;
 
 export default class IndexPage extends React.Component {
   render() {
-    const USE_BLOG = false;
     const { data } = this.props;
     const { edges: posts } = data.posts;
     const { edges: dates } = data.dates;
     const { edges: hp } = data.hp;
     const homepage = hp[0].node.frontmatter
+    const USE_BLOG = homepage.use_blog;
 
     // console.log(homepage)
 
@@ -48,37 +48,6 @@ export default class IndexPage extends React.Component {
               <Hr />
             </div>
 
-            {USE_BLOG &&
-              posts.map(({ node: post }) => (
-                <div
-                  className="content"
-                  style={{
-                    border: "1px solid white",
-                    padding: "1rem 1.5rem",
-                    margin: "0 auto 2rem auto",
-                    maxWidth: 400
-                  }}
-                  key={post.id}
-                >
-                  <p>
-                    <Link className={blog.postLink} to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <br />
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
-                </div>
-              ))}
-            <br />
             <h2 className={heading}>Dates</h2>
             <br />
             {dates.map(({ node: post }) => (
@@ -119,9 +88,46 @@ export default class IndexPage extends React.Component {
                 <Link to={post.fields.slug} style={{ float: 'right' }}>
                   More...
                   </Link>
-
               </div>
             ))}
+            {USE_BLOG &&
+              <Hr />
+            }
+            <br />
+            {USE_BLOG &&
+              posts.map(({ node: post }) => (
+                <div
+                  className="content"
+                  style={{
+                    border: "1px solid white",
+                    padding: "1rem 1.5rem",
+                    margin: "0 auto 2rem auto",
+                    maxWidth: 400
+                  }}
+                  key={post.id}
+                >
+                  <h3 style={{
+                    marginTop: 4,
+                    marginBottom: 0
+                  }}>
+                    <Link className={blog.postLink} to={post.fields.slug}>
+                      {post.frontmatter.title}
+                    </Link>
+
+                    <br />
+                    <span> &bull; </span>
+                    <small>{post.frontmatter.date}</small>
+                  </h3>
+
+                  <p>
+                    {post.excerpt}
+                  </p>
+
+                  <Link to={post.fields.slug}>
+                    Keep Reading →
+                    </Link>
+                </div>
+              ))}
             <Hr />
           </div>
         </section>
@@ -148,6 +154,7 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
+            use_blog
             title
             description
             heading

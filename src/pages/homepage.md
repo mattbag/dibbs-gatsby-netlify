@@ -7,6 +7,7 @@ video:
 socials:
   email_link: divebell@gmail.com
   facebook_link: 'https://www.facebook.com/divebellband/'
+  instagram_link: 'https://www.instagram.com/dive_bell/'
   music_link: 'http://hyperurl.co/divebellundercover'
 ---
 

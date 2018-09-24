@@ -1,8 +1,8 @@
 ---
 title: Homepage
-image: /img/jumbotron.jpg
+image: /img/unnamed-1.png
 video:
-  videoImage: /img/flavor_wheel.jpg
+  videoImage: /img/unnamed-2.jpg
   videoSource: 'https://www.youtube.com/embed/t5xhya-grlU'
 socials:
   email_link: 'mailto:divebell@gmail.com'

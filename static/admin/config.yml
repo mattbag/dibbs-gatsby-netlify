@@ -30,7 +30,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Event Url", name: "eventUrl", widget: "text"}
-      - {label: "Video Url", name: "videoUrl", widget: "text"}
+      - {label: Video, name: video, widget: object,required: false, fields: [{label: Video Source, name: videoSource, widget: string}, {label: Video Image, name: videoImage, widget: image}]}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
@@ -46,7 +46,7 @@ collections:
           - {label: Heading, name: heading, widget: string,required: false}
           - {label: Description, name: description, widget: string,required: false}
           - {label: Intro, name: intro, widget: object,required: false, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Video, name: video, widget: object,required: false, fields: [{label: Video Srouce, name: videoSource, widget: string}, {label: Video Image, name: videoImage, widget: image}]}
+          - {label: Video, name: video, widget: object,required: false, fields: [{label: Video Source, name: videoSource, widget: string}, {label: Video Image, name: videoImage, widget: image}]}
           - {label: Social Links, name: socials, widget: object,required: false, fields: [{label: Facebook, name: facebook_link, widget: string},{label: Music, name: music_link, widget: string},{label: Youtube, name: youtube_link, widget: string},{label: Instagram, name: instagram_link, widget: string},{label: Email, name: email_link, widget: string}]}
           - {label: Testimonials, name: testimonials, widget: list,required: false, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
       - file: "src/pages/about/index.md"

@@ -25,7 +25,7 @@ export default class IndexPage extends React.Component {
     const { edges: hp } = data.hp;
     const homepage = hp[0].node.frontmatter
 
-    console.log(homepage)
+    // console.log(homepage)
 
     return (
       <Layout>
@@ -86,13 +86,13 @@ export default class IndexPage extends React.Component {
                 className="content"
                 style={{
                   border: "1px solid white",
-                  padding: "1rem 1.5rem",
+                  padding: "1rem 1.5rem 2rem 1.5rem",
                   margin: "0 auto 2rem auto",
                   maxWidth: 400
                 }}
                 key={post.id}
               >
-                <h3>
+                <h3 style={{marginTop:0}}>
                   <Link className={blog.postLink} to={post.fields.slug}>
                     {post.frontmatter.title}
                   </Link>
@@ -100,15 +100,13 @@ export default class IndexPage extends React.Component {
                   <span> &bull; </span>
                   <small>{post.frontmatter.date}</small>
                 </h3>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
+                <p>{post.excerpt}</p>
+                
                   {post.frontmatter.eventUrl && (
                     <a
                       style={{
                         borderBottom: "2px dashed white",
-                        padding: ".35rem .7rem",
+                        padding: ".35rem 0",
                         marginRight: "1rem"
                       }}
                       href={post.frontmatter.eventUrl}
@@ -118,10 +116,10 @@ export default class IndexPage extends React.Component {
                       Save the date!
                     </a>
                   )}
-                  <Link className="button is-small" to={post.fields.slug}>
-                    More
+                  <Link to={post.fields.slug} style={{float:'right'}}>
+                    More...
                   </Link>
-                </p>
+
               </div>
             ))}
             <Hr />

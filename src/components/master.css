@@ -6,7 +6,7 @@
 }
 
 html {
-    padding: 4vh 3vw;
+    padding: 3vw;
     background-color: pink;
     font-size: 120%;
 }
@@ -34,6 +34,7 @@ h5,
 h6 {
     color: inherit;
     font-weight: 300;
+    /* font-size:2rem; */
     /* font-style: normal; */
 }
 

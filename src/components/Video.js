@@ -33,7 +33,7 @@ class Video extends Component {
           <div
             onClick={()=>this.setState({ play: true })}
             className={video.play}
-            style={{ backgroundImage: `url(${this.props.poster})` }}
+            style={this.props.poster && { backgroundImage: `url(${this.props.poster})` }}
           >
             <div
               className={video.icon}

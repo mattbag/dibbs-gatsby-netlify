@@ -7,15 +7,13 @@ import Layout from "../components/Layout";
 import Video from "../components/Video";
 import { css } from "emotion";
 
-import poster from "../img/unnamed-1.png";
-import band from "../img/unnamed-2.jpg";
-
 const heading = css(tw`text-pink text-center text-3xl my-6`);
 const bandImg = css(tw`w-md mx-auto my-2 block`);
 const block = css(tw`py-4 md:py-8`);
 const blog = {
   postLink: css(tw`serif text-md`)
 };
+
 const Hr = () => <hr style={{ width: 60, margin: "20 auto" }} />;
 
 export default class IndexPage extends React.Component {
@@ -36,8 +34,8 @@ export default class IndexPage extends React.Component {
             <Hr />
             {/* <h2 className={heading}>Latest Video</h2> */}
             <Video
-              poster={band}
-              videoSource={"https://www.youtube.com/embed/t5xhya-grlU"}
+              poster={homepage.video.videoImage}
+              videoSource={homepage.video.videoSource}
             />
 
             <div className="content">
@@ -45,7 +43,7 @@ export default class IndexPage extends React.Component {
               <br />
               {/* <h2 className={heading}>Bio</h2> */}
 
-              <img src={poster} alt="Dive Bell" className={bandImg} />
+              <img src={homepage.image} alt="Dive Bell" className={bandImg} />
               <br />
               <Hr />
             </div>
@@ -151,6 +149,21 @@ export const pageQuery = graphql`
           frontmatter {
             title
             description
+            heading
+            image
+            socials {
+              email_link
+              facebook_link
+              music_link
+            }
+            video{
+              videoImage
+              videoSource
+            }
+            intro {
+              heading
+              description
+            }
           }
         }
       }

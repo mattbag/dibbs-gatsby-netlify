@@ -24,20 +24,19 @@ export const DatePostTemplate = ({
   helmet
 }) => {
   const PostContent = contentComponent || Content;
-
+  
   return (
     <section className={dateStyle.wrap}>
       {helmet || ""}
-      <div className="container content">
-        <div className="columns">
+      
           <div className="column is-10 is-offset-1">
             <h2 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h2>
 
             {
-              video &&  
-              <Video videoSource={video.videoSource} />
+              video.videoSource &&
+              <Video videoSource={video.videoSource} poster={video.videoImage} />
             }
 
             <p>{description}</p>
@@ -69,8 +68,7 @@ export const DatePostTemplate = ({
               </div>
             ) : null}
           </div>
-        </div>
-      </div>
+       
     </section>
   );
 };

@@ -31,7 +31,7 @@ export const VideosPageTemplate = ({
               <PageContent className="content" content={content} />
 
               {videos.map((v,i) => (
-                <Video videoSource={v.videoUrl} key={`listvideo_${i}`} />
+                <Video videoSource={v.videoUrl} poster={v.videoImage} key={`listvideo_${i}`} />
               ))}
 
               {Hr}

@@ -41,6 +41,7 @@ collections:
         label: "Home Page"
         name: "homepage"
         fields:
+          - {label: "Use Blog", name: "use_blog", widget: "boolean", default: false}
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image, required: false}
           - {label: Heading, name: heading, widget: string,required: false}

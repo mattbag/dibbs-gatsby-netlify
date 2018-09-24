@@ -41,9 +41,9 @@ export default class IndexPage extends React.Component {
             <div className="content">
               <Hr />
               <br />
-              {/* <h2 className={heading}>Bio</h2> */}
-
-              <img src={homepage.image} alt="Dive Bell" className={bandImg} />
+              {homepage.image && <img src={homepage.image} alt="Dive Bell" className={bandImg} />}
+              {homepage.intro && homepage.intro.heading && <h2 className={heading}>{homepage.intro.heading}</h2>}
+              {homepage.intro && homepage.intro.description && <div dangerouslySetInnerHTML={{ __html: homepage.intro.description }}></div>}
               <br />
               <Hr />
             </div>
@@ -92,7 +92,7 @@ export default class IndexPage extends React.Component {
                 }}
                 key={post.id}
               >
-                <h3 style={{marginTop:0}}>
+                <h3 style={{ marginTop: 0 }}>
                   <Link className={blog.postLink} to={post.fields.slug}>
                     {post.frontmatter.title}
                   </Link>
@@ -101,23 +101,23 @@ export default class IndexPage extends React.Component {
                   <small>{post.frontmatter.date}</small>
                 </h3>
                 <p>{post.excerpt}</p>
-                
-                  {post.frontmatter.eventUrl && (
-                    <a
-                      style={{
-                        borderBottom: "2px dashed white",
-                        padding: ".35rem 0",
-                        marginRight: "1rem"
-                      }}
-                      href={post.frontmatter.eventUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Save the date!
+
+                {post.frontmatter.eventUrl && (
+                  <a
+                    style={{
+                      borderBottom: "2px dashed white",
+                      padding: ".35rem 0",
+                      marginRight: "1rem"
+                    }}
+                    href={post.frontmatter.eventUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Save the date!
                     </a>
-                  )}
-                  <Link to={post.fields.slug} style={{float:'right'}}>
-                    More...
+                )}
+                <Link to={post.fields.slug} style={{ float: 'right' }}>
+                  More...
                   </Link>
 
               </div>

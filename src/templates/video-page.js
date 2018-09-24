@@ -53,7 +53,7 @@ const VideosPage = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <Layout>
+    <Layout seotitle="VIDEOS">
       <VideosPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}

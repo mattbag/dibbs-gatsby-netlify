@@ -18,7 +18,7 @@ export default class DatesPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <Layout>
+      <Layout seotitle="DATES">
         <section className="section">
           <div className="container">
             <div className="content">

@@ -13,7 +13,7 @@ export default class BlogPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
     const heading = css(tw`text-pink text-center`);
     return (
-      <Layout>
+      <Layout seotitle="BLOG">
         <section className="section">
           <div className="container">
             <div className="content">

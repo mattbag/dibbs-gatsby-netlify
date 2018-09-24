@@ -13,9 +13,9 @@ const layoutWrap = css(tw`max-w-2xl mx-auto px-4`);
 const outernMost = css(tw`p-4`);
 // const sticky = css(tw`sticky pin-t bg-white z-10`);
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, seotitle }) => (
   <div className={outernMost} style={{minHeight:'90vh'}}>
-    <Helmet title="DIVE BELL" />
+    <Helmet title={seotitle ? seotitle + ' | DIVE BELL' : 'DIVE BELL'} />
     <Socialbar />
     <Navbar />
     <div className={layoutWrap}>{children}</div>

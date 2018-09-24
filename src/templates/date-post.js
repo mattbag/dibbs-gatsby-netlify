@@ -35,7 +35,11 @@ export const DatePostTemplate = ({
               {title}
             </h2>
 
-            <Video videoSource={video} />
+            {
+              video &&  
+              <Video videoSource={video.videoSource} />
+            }
+
             <p>{description}</p>
             <PostContent content={content} />
             {eventUrl && (
@@ -92,7 +96,7 @@ const DatePost = ({ data }) => {
         helmet={<Helmet title={`${post.frontmatter.title} | DIVE BELL`} />}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        video={post.frontmatter.videoUrl}
+        video={post.frontmatter.video}
         eventUrl={post.frontmatter.eventUrl}
       />
     </Layout>
@@ -115,7 +119,10 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        videoUrl
+        video{
+          videoSource
+          videoImage
+        }
         eventUrl
         description
         tags

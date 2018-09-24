@@ -32,7 +32,7 @@ collections:
       - {label: "Event Url", name: "eventUrl", widget: "text"}
       - {label: Video, name: video, widget: object,required: false, fields: [{label: Video Source, name: videoSource, widget: string}, {label: Video Image, name: videoImage, widget: image}]}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Tags", name: "tags", widget: "list",required: false}
 
   - name: "pages"
     label: "Pages"

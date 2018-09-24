@@ -15,16 +15,10 @@ const video = {
 };
 
 class Video extends Component {
-  constructor() {
-    super();
-    this.state = {
-      play: false
-      // url: this.props.videoSource
-    };
+  state = {
+    play: false
   }
-  playVideo = () => {
-    this.setState({ play: true });
-  };
+
   // componentDidMount() {
   //   // this.setState({url: this.props.url})
   //   // this.setState({url: 'https://www.youtube.com/embed/t5xhya-grlU'})
@@ -37,7 +31,7 @@ class Video extends Component {
       >
         {!this.state.play ? (
           <div
-            onClick={this.playVideo}
+            onClick={()=>this.setState({ play: true })}
             className={video.play}
             style={{ backgroundImage: `url(${this.props.poster})` }}
           >

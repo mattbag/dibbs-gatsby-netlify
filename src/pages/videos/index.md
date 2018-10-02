@@ -1,10 +1,9 @@
 ---
 templateKey: video-page
 title: Videos
-path: /videos
 videolist:
-  - videoUrl: 'https://www.youtube.com/embed/t5xhya-grlU'
-  - videoUrl: 'https://www.youtube.com/embed/t5xhya-grlU'
+  - videoImage: /img/unnamed-2.jpg
+    videoUrl: 'https://www.youtube.com/watch?v=Ui3K20-2iQQ'
 ---
 ### Ever found your favourite bar? 
 

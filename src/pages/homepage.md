@@ -10,6 +10,6 @@ socials:
   facebook_link: 'https://www.facebook.com/divebellband/'
   instagram_link: 'https://www.instagram.com/dive_bell/'
   music_link: 'http://hyperurl.co/divebellundercover'
-  youtube_link: ''
+  youtube_link: 'https://www.youtube.com/channel/UCDtKBxbGUYbbbcykSycbayA'
 ---
 

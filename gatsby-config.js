@@ -1,38 +1,38 @@
 module.exports = {
   siteMetadata: {
-    title: 'DIVE BELL',
+    title: "DIVE BELL"
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
-    'gatsby-plugin-emotion',
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sass",
+    "gatsby-plugin-emotion",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
+        name: "pages"
+      }
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/img`,
-        name: 'images',
-      },
+        name: "images"
+      }
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-transformer-remark",
       options: {
-        plugins: [],
-      },
+        plugins: []
+      }
     },
     {
-      resolve: 'gatsby-plugin-netlify-cms',
+      resolve: "gatsby-plugin-netlify-cms",
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
+        modulePath: `${__dirname}/src/cms/cms.js`
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -43,10 +43,10 @@ module.exports = {
         background_color: `#0a0a0a`,
         theme_color: `#ffc0cb`,
         display: `standalone`,
-        icon: `src/img/icon.png`, // This path is relative to the root of the site.
-      },
+        icon: `src/img/icon.png` // This path is relative to the root of the site.
+      }
     },
     `gatsby-plugin-offline`,
-    'gatsby-plugin-netlify', // make sure to keep it last in the array
-  ],
-}
+    "gatsby-plugin-netlify" // make sure to keep it last in the array
+  ]
+};

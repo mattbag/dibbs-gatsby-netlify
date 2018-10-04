@@ -78,6 +78,7 @@ export const VideosPageQuery = graphql`
         title
         videolist {
           videoUrl
+          videoImage
         }
       }
     }

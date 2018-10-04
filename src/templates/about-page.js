@@ -42,6 +42,9 @@ const AboutPage = ({ data }) => {
         title={post.frontmatter.title}
         content={post.html}
       />
+      <br/>
+      <hr style={{ width: 100, margin: "20 auto" }} />
+
     </Layout>
   )
 }

@@ -6,6 +6,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     "gatsby-plugin-emotion",
+    `gatsby-plugin-netlify-cms-paths`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -18,6 +19,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/img`,
         name: "images"
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/static/img`,
+        name: "uploads"
       }
     },
     "gatsby-plugin-sharp",

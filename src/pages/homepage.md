@@ -1,7 +1,11 @@
 ---
 use_blog: false
 title: Homepage
+heading: Dive Bell
 image: /img/unnamed-1.png
+intro:
+  heading: ''
+  description: ''
 video:
   videoImage: /img/unnamed-2.jpg
   videoSource: 'https://www.youtube.com/embed/Z-wiMxGZG0U'

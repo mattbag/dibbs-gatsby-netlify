@@ -34,7 +34,7 @@ export const VideosPageTemplate = ({
                 <Video videoSource={v.videoUrl} poster={v.videoImage} key={`listvideo_${i}`} />
               ))}
 
-              {Hr('0 auto')}
+              {Hr('20 auto')}
             </div>
           </div>
         </div>

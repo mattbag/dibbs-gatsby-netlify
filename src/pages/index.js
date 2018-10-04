@@ -3,12 +3,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
+import Img from "gatsby-image"
+
 import Layout from "../components/Layout";
 import Video from "../components/Video";
 import { css } from "emotion";
 
 const heading = css(tw`text-pink text-center text-4xl my-6`);
-const bandImg = css(tw`w-md mx-auto my-2 block`);
+// const bandImg = css(tw`w-md mx-auto my-2 block`);
 const block = css(tw`py-4 md:py-8`);
 const blog = {
   postLink: css(tw`serif text-md`)
@@ -41,7 +43,7 @@ export default class IndexPage extends React.Component {
             <div className="content">
               <Hr />
               <br />
-              {homepage.image && <img src={homepage.image} alt="Dive Bell" className={bandImg} />}
+              {homepage.image && <Img fluid={homepage.image.childImageSharp.fluid} alt="Dive Bell" /> }
               {homepage.intro && homepage.intro.heading && <h2 className={heading}>{homepage.intro.heading}</h2>}
               {homepage.intro && homepage.intro.description && <div dangerouslySetInnerHTML={{ __html: homepage.intro.description }}></div>}
               <br />
@@ -158,14 +160,16 @@ export const pageQuery = graphql`
             title
             description
             heading
-            image
+            image{
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             video{
               videoImage
               videoSource
-            }
-            intro {
-              heading
-              description
             }
           }
         }

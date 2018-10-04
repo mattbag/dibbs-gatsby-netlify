@@ -1,5 +1,4 @@
 import CMS from "netlify-cms";
-z;
 import AboutPagePreview from "./preview-templates/AboutPagePreview";
 import BlogPostPreview from "./preview-templates/BlogPostPreview";
 import DatePreview from "./preview-templates/DatePreview";

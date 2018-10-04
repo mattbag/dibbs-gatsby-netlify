@@ -10,7 +10,6 @@ import { css } from "emotion";
 const date = {
   wrap: css`${tw`mx-auto mb-8`} max-width:800px`,
   card: css`${tw`p-4 md:py-6 md:px-10 mb-4`}`,
-  // page: css(tw`p-4 md:px-8 mb-4 max-w-md mx-auto `),
 };
 
 export default class DatesPage extends React.Component {
@@ -39,7 +38,7 @@ export default class DatesPage extends React.Component {
                   {post.frontmatter.title}
                 </Link>
                 <br />
-                <span> &bull; ON: </span>
+                <span> &bull; </span>
                 <small>{post.frontmatter.date}</small>
               </h2>
               <p>
@@ -51,18 +50,18 @@ export default class DatesPage extends React.Component {
                   <a
                     style={{
                       borderBottom: "2px dashed white",
-                      padding: ".35rem .7rem",
+                      padding: ".35rem 0",
                       marginRight: "1rem"
                     }}
                     href={post.frontmatter.eventUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Save the date!
+                   Info
                     </a>
                 )}
                 <Link className="button is-small" to={post.fields.slug}>
-                  Keep Reading →
+                  Read more
                   </Link>
               </p>
             </div>

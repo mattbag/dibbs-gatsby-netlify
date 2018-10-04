@@ -82,11 +82,11 @@ export default class IndexPage extends React.Component {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Save the date!
+                    Info
                     </a>
                 )}
                 <Link to={post.fields.slug} style={{ float: 'right' }}>
-                  More...
+                  Read more
                   </Link>
               </div>
             ))}

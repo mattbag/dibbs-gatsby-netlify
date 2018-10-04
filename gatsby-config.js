@@ -69,3 +69,5 @@ module.exports = {
     "gatsby-plugin-netlify" // make sure to keep it last in the array
   ]
 };
+
+// https://www.gatsbyjs.org/packages/gatsby-plugin-robots-txt/?=robo

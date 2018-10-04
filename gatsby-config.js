@@ -33,7 +33,7 @@ module.exports = {
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: []
+        plugins: [`gatsby-plugin-netlify-cms-paths`]
       }
     },
     {

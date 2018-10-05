@@ -19,6 +19,7 @@ export const DatePostTemplate = ({
   description,
   tags,
   title,
+  date,
   video,
   eventUrl,
   helmet
@@ -33,6 +34,7 @@ export const DatePostTemplate = ({
             <h2>
               {title}
             </h2>
+            <h3>&bull; {date}</h3>
             <hr style={{ width: 100 }} />
             {
               video.videoSource &&
@@ -94,6 +96,7 @@ const DatePost = ({ data }) => {
         helmet={<Helmet title={`${post.frontmatter.title} | DIVE BELL`} />}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        date={post.frontmatter.date}
         video={post.frontmatter.video}
         eventUrl={post.frontmatter.eventUrl}
       />

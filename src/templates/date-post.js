@@ -31,9 +31,9 @@ export const DatePostTemplate = ({
       {helmet || ""}
       
           <div className="column is-10 is-offset-1">
-            <h2>
+            <h1>
               {title}
-            </h2>
+            </h1>
             <h3>{date}</h3>
             {/* <hr style={{ width: 100 }} /> */}
             {
@@ -70,7 +70,9 @@ export const DatePostTemplate = ({
               </div>
             ) : null} */}
           </div>
-       
+          <br/>
+          <br/>
+       <hr style={{margin: '20 auto', width:100}}/>
     </section>
   );
 };
@@ -88,7 +90,7 @@ const DatePost = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <Layout>
+    <Layout seodescription={post.frontmatter.description}>
       <DatePostTemplate
         content={post.html}
         contentComponent={HTMLContent}

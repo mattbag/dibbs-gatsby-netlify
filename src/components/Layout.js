@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar";
 
 // import "./../styles/global";
 // import './all.sass'
-// import "./master.css";
+import "../styles//master.css";
 import Socialbar from "./SocialBar";
 
 const layoutWrap = css(tw`max-w-2xl mx-auto px-4`);

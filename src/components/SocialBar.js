@@ -49,7 +49,7 @@ const Socialbar = () => (
           if (!checkIcon[i.name + '_link']) return null
 
           return (
-            <a key={`icon_${i.name}`} rel="noopener noreferrer" target="_blank" href={checkIcon[i.name + '_link']} className={social.icon} style={{ height: 20, width: 20 }}>
+            <a key={`icon_${i.name}`} name={'go to '+i.name} rel="noopener noreferrer" target="_blank" href={checkIcon[i.name + '_link']} className={social.icon} style={{ height: 20, width: 20 }}>
               <div dangerouslySetInnerHTML={{ __html: i.svg }}></div>
               <small style={{ display: 'none' }}>Go to {i.name}</small>
             </a>

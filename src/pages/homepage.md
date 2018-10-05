@@ -1,14 +1,14 @@
 ---
 use_blog: false
 title: Homepage
-heading: Dive Bell
 image: /img/unnamed-1.png
+heading: Dive Bell
 intro:
   heading: ''
   description: ''
 video:
   videoImage: /img/unnamed-2.jpg
-  videoSource: 'https://www.youtube.com/embed/Z-wiMxGZG0U'
+  videoSource: 'https://www.youtube.com/embed/Ui3K20-2iQQ'
 socials:
   email_link: 'mailto:divebellband@gmail.com'
   facebook_link: 'https://www.facebook.com/divebellband/'

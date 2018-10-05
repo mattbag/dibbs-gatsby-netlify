@@ -10,6 +10,6 @@ video:
 tags:
   - ''
 ---
-## Dive Bell will be playing Newtown Festival Nov 11th 2018.
+
 
 ![null](/img/unnamed.jpg)

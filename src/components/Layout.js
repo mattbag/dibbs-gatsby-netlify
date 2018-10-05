@@ -3,10 +3,11 @@ import { css } from "emotion";
 import React from "react";
 import Helmet from "react-helmet";
 
+import './../styles/global'
 import Navbar from "../components/Navbar";
 
 // import './all.sass'
-import "./master.css";
+// import "./master.css";
 import Socialbar from "./SocialBar";
 
 const layoutWrap = css(tw`max-w-2xl mx-auto px-4`);

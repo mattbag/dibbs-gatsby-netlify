@@ -37,11 +37,11 @@ export const DatePostTemplate = ({
             <h3>{date}</h3>
             {/* <hr style={{ width: 100 }} /> */}
             {
-              video.videoSource &&
+              video && video.videoSource &&
               <Video videoSource={video.videoSource} poster={video.videoImage} />
             }
 
-            <p>{description}</p>
+            {/* <p>{description}</p> */}
             <PostContent content={content} />
             {eventUrl && (
               <a

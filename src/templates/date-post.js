@@ -3,9 +3,9 @@ import { css } from "emotion";
 
 import React from "react";
 import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
+// import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import Video from "../components/Video";
@@ -17,7 +17,7 @@ export const DatePostTemplate = ({
   content,
   contentComponent,
   description,
-  tags,
+  // tags,
   title,
   date,
   video,
@@ -34,8 +34,8 @@ export const DatePostTemplate = ({
             <h2>
               {title}
             </h2>
-            <h3>&bull; {date}</h3>
-            <hr style={{ width: 100 }} />
+            <h3>{date}</h3>
+            {/* <hr style={{ width: 100 }} /> */}
             {
               video.videoSource &&
               <Video videoSource={video.videoSource} poster={video.videoImage} />
@@ -57,7 +57,7 @@ export const DatePostTemplate = ({
                 Info
               </a>
             )}
-            {false && tags && tags.length ? (
+            {/* {false && tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
                 <ul className="taglist">
@@ -68,7 +68,7 @@ export const DatePostTemplate = ({
                   ))}
                 </ul>
               </div>
-            ) : null}
+            ) : null} */}
           </div>
        
     </section>
@@ -94,7 +94,7 @@ const DatePost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={<Helmet title={`${post.frontmatter.title} | DIVE BELL`} />}
-        tags={post.frontmatter.tags}
+        // tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         date={post.frontmatter.date}
         video={post.frontmatter.video}
@@ -126,7 +126,7 @@ export const pageQuery = graphql`
         }
         eventUrl
         description
-        tags
+        # tags
       }
     }
   }

@@ -24,6 +24,7 @@ class Video extends Component {
   //   // this.setState({url: 'https://www.youtube.com/embed/t5xhya-grlU'})
   // }
   render() {
+    const bg = this.props.poster ? { backgroundImage: `url(${this.props.poster})` } : {}
     return (
       <div
         className={video.wrap}
@@ -33,7 +34,7 @@ class Video extends Component {
           <div
             onClick={()=>this.setState({ play: true })}
             className={video.play}
-            style={this.props.poster && { backgroundImage: `url(${this.props.poster})` }}
+            style={bg}
           >
             <div
               className={video.icon}

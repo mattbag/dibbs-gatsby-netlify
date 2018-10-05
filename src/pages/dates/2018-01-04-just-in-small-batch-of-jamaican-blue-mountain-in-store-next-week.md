@@ -12,6 +12,6 @@ video:
 tags:
   - ''
 ---
+Dive Bell will be playing Newtown Festival alongside Dappled Cities, Exhibitionist and Palms v soon.
 
-
-![null](/img/unnamed.jpg)
+![Dive Bell will be playing Newtown Festival](/img/unnamed.jpg)

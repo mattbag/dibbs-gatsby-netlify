@@ -3,9 +3,9 @@ import { css } from "emotion";
 import React from "react";
 import Helmet from "react-helmet";
 
-import './../styles/global'
 import Navbar from "../components/Navbar";
 
+// import "./../styles/global";
 // import './all.sass'
 // import "./master.css";
 import Socialbar from "./SocialBar";
@@ -15,10 +15,13 @@ const outernMost = css(tw`p-4`);
 // const sticky = css(tw`sticky pin-t bg-white z-10`);
 
 const TemplateWrapper = ({ children, seotitle, seodescription }) => (
-  <div className={outernMost} style={{ minHeight: '90vh' }}>
-    <Helmet title={seotitle ? seotitle + ' | DIVE BELL' : 'DIVE BELL'} >
+  <div className={outernMost} style={{ minHeight: "90vh" }}>
+    <Helmet title={seotitle ? seotitle + " | DIVE BELL" : "DIVE BELL"}>
       <html lang="en" />
-      <meta name="description" content={seodescription ? seodescription : 'Follow DIVE BELL'} />
+      <meta
+        name="description"
+        content={seodescription ? seodescription : "Follow DIVE BELL"}
+      />
     </Helmet>
     <Socialbar />
     <Navbar />

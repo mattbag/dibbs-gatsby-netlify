@@ -47,14 +47,14 @@ export const DatePostTemplate = ({
               <a
                 style={{
                   borderBottom: "2px dashed white",
-                  padding: ".35rem .7rem",
+                  padding: ".35rem 0",
                   marginRight: "1rem"
                 }}
                 href={eventUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Save the date!
+                Info
               </a>
             )}
             {false && tags && tags.length ? (

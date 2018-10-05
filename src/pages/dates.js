@@ -60,7 +60,7 @@ export default class DatesPage extends React.Component {
                    Info
                     </a>
                 )}
-                <Link className="button is-small" to={post.fields.slug}>
+                <Link className="button is-small" to={post.fields.slug} style={{ float: 'right' }}>
                   Read more
                   </Link>
               </p>

@@ -35,15 +35,16 @@ export default class IndexPage extends React.Component {
           <div className={block}>
             <Hr />
             {/* <h2 className={heading}>Latest Video</h2> */}
+            {/* {console.log(homepage.video.videoImage.childImageSharp)} */}
             <Video
-              poster={homepage.video.videoImage}
+              poster={homepage.video.videoImage.childImageSharp.fluid}
               videoSource={homepage.video.videoSource}
             />
 
             <div className="content">
               <Hr />
               <br />
-              {homepage.image && <Img fluid={homepage.image.childImageSharp.fluid} alt="Dive Bell" /> }
+              {homepage.image && <Img fluid={homepage.image.childImageSharp.fluid} alt="Dive Bell" />}
               {homepage.intro && homepage.intro.heading && <h2 className={heading}>{homepage.intro.heading}</h2>}
               {homepage.intro && homepage.intro.description && <div dangerouslySetInnerHTML={{ __html: homepage.intro.description }}></div>}
               <br />
@@ -168,7 +169,13 @@ export const pageQuery = graphql`
               }
             }
             video{
-              videoImage
+              videoImage{
+                childImageSharp {
+                  fluid(maxWidth: 1200) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
               videoSource
             }
           }

@@ -31,7 +31,7 @@ export const VideosPageTemplate = ({
               <PageContent className="content" content={content} />
 
               {videos.map((v,i) => (
-                <Video videoSource={v.videoUrl} poster={v.videoImage} key={`listvideo_${i}`} />
+                <Video videoSource={v.videoUrl} poster={v.videoImage.childImageSharp.fluid} key={`listvideo_${i}`} />
               ))}
 
               {Hr('20 auto')}
@@ -78,7 +78,13 @@ export const VideosPageQuery = graphql`
         title
         videolist {
           videoUrl
-          videoImage
+          videoImage{
+            childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+          }
         }
       }
     }

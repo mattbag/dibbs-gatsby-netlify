@@ -2,18 +2,12 @@
 import { css } from "emotion";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Img from 'gatsby-image'
 
 const video = {
   wrap: css(tw`bg-pink-lighter my-8 border-white relative`),
-  overlay: css(tw`absolute pin w-full h-full`),
-  poster: css`
-  .gatsby-image-wrapper{
-    height:100%;
-  }
-  `,
+  iframe: css(tw`absolute pin w-full h-full`),
   play: css(
-    tw`absolute pin m-auto bg-center bg-no-repeat bg-cover cursor-pointer z-10`
+    tw`absolute pin m-auto bg-center bg-no-repeat bg-cover cursor-pointer`
   ),
   icon: css`${tw`absolute pin m-auto`}`,
   svg:
@@ -30,8 +24,7 @@ class Video extends Component {
   //   // this.setState({url: 'https://www.youtube.com/embed/t5xhya-grlU'})
   // }
   render() {
-    // const bg = this.props.poster ? { backgroundImage: `url(${this.props.poster})` } : {}
-    const bg = {};
+    const bg = this.props.poster ? { backgroundImage: `url(${this.props.poster})` } : {}
     return (
       <div
         className={video.wrap}
@@ -39,13 +32,10 @@ class Video extends Component {
       >
         {!this.state.play ? (
           <div
-            onClick={() => this.setState({ play: true })}
+            onClick={()=>this.setState({ play: true })}
             className={video.play}
             style={bg}
           >
-            <div className={`${video.overlay} ${video.poster}`}>
-              <Img fluid={this.props.poster} />
-            </div>
             <div
               className={video.icon}
               style={{ height: "10%" }}
@@ -53,16 +43,15 @@ class Video extends Component {
             />
           </div>
         ) : (
-            <iframe
-              title={"Dive Bell Video from " + this.props.videoSource}
-              className={video.overlay}
-              src={this.props.videoSource + "?autoplay=1"}
-              frameBorder="0"
-              allow="autoplay encrypted-media"
-              allowFullScreen
-            />
-          )}
-
+          <iframe
+            title={"Dive Bell Video from " + this.props.videoSource}
+            className={video.iframe}
+            src={this.props.videoSource + "?autoplay=1"}
+            frameBorder="0"
+            allow="autoplay encrypted-media"
+            allowFullScreen
+          />
+        )}
       </div>
     );
   }
@@ -70,7 +59,7 @@ class Video extends Component {
 
 Video.propTypes = {
   videoSource: PropTypes.string,
-  poster: PropTypes.object
+  poster: PropTypes.string
 };
 
 export default Video;

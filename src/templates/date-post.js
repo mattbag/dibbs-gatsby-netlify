@@ -38,7 +38,8 @@ export const DatePostTemplate = ({
             {/* <hr style={{ width: 100 }} /> */}
             {
               video && video.videoSource &&
-              <Video videoSource={video.videoSource} poster={video.videoImage} />
+              // <Video videoSource={video.videoSource} poster={video.videoImage} />
+              <Video videoSource={video.videoSource} poster={video.videoImage.childImageSharp.fluid} />
             }
 
             {/* <p>{description}</p> */}
@@ -124,7 +125,13 @@ export const pageQuery = graphql`
         title
         video{
           videoSource
-          videoImage
+          videoImage{
+            childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+          }
         }
         eventUrl
         description

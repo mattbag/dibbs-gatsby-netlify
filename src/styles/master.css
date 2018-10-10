@@ -1,6 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC'); */
 
 /* @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond'); */
+
 * {
     box-sizing: border-box
 }
@@ -23,7 +24,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.wf-cormorantgaramond-n4-active.wf-active{
+
+.wf-cormorantgaramond-n4-active.wf-active {
     font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
 }
 
@@ -55,6 +57,7 @@ a {
     text-shadow: 1px 1px #000;
     font-weight: 300;
 }
+
 [aria-current="page"],
 a:focus,
 a:hover {
@@ -76,4 +79,8 @@ blockquote {
     padding: .2rem;
     padding-left: 1.5rem;
     margin: 0;
+}
+
+.gatsby-image-wrapper {
+    background-color: #000;
 }

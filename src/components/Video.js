@@ -25,10 +25,6 @@ class Video extends Component {
     play: false
   }
 
-  // componentDidMount() {
-  //   // this.setState({url: this.props.url})
-  //   // this.setState({url: 'https://www.youtube.com/embed/t5xhya-grlU'})
-  // }
   render() {
     // const bg = this.props.poster ? { backgroundImage: `url(${this.props.poster})` } : {}
     const bg = {};

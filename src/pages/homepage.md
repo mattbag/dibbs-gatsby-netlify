@@ -1,7 +1,7 @@
 ---
 use_blog: false
 title: Homepage
-image: /img/dive-bell_4up.jpg
+image: /img/dibbsy.jpg
 heading: Dive Bell
 intro:
   heading: ''

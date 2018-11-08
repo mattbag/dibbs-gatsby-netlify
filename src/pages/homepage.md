@@ -4,8 +4,8 @@ title: Homepage
 image: /img/dibbsy.jpg
 heading: Dive Bell
 intro:
-  heading: ''
-  description: ''
+  heading: 'NEW SINGLE ''SNOW'' OUT NOW '
+  description: 'http://hyperurl.co/divebellsnow'
 video:
   videoImage: /img/unnamed-2.jpg
   videoSource: 'https://www.youtube.com/embed/Ui3K20-2iQQ'

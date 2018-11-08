@@ -13,4 +13,4 @@ The band is comprised of 4 divine beings of music who have come together to shar
 
 > Sally Quade
 
-![band image](/img/unnamed-1.png)
+![band image](/img/dibbsy.jpg)

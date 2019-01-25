@@ -2,15 +2,8 @@
 templateKey: about-page
 title: Bio
 ---
-### Ever found your favourite bar?
+### “Dive Bell are driven by  synths, but also by something deeper and more submerged that that. This  is precision and dream-state, all sorts of evocative, the kind of cinema  that makes you want to look away but that you can’t stop watching. It’s  really bloody impressive.” 
 
-Where the hallways are dark and long, shafts of light flittering the smoke as you walk along til you realise it's not a bar you've actually walked into a 1920s ballroom hidden in a suburban lot.
-As the smoke clears a little you hear a wall of sound wash over and inside you. Remnants of Portishead, Madonna, Nine Inch Nails and King Tubby swirl through the space.
-
-### This is Dive Bell. Welcome.
-
-The band is comprised of 4 divine beings of music who have come together to share their immaculate sounds.Like a well crafted gin, you can't help but fall in love with their melodies and the dreamscapes created in your mind will stay as a lingering memory for all time.
-
-> Sally Quade
+### \- The Underground Stage
 
 ![band image](/img/dibbsy.jpg)

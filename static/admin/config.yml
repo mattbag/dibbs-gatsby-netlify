@@ -27,11 +27,11 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "date-post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Live Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Event Url", name: "eventUrl", widget: "string"}
-      - {label: Video, name: video, widget: object,required: false, fields: [{label: Video Source, name: videoSource, widget: string}, {label: Video Image, name: videoImage, widget: image}]}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Live Date", name: "date", widget: "datetime", required: false}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Event Url", name: "eventUrl", widget: "string", required: false}
+      - {label: Video, name: video, widget: object, required: false, fields: [{label: Video Source, name: videoSource, widget: string, required: false}, {label: Video Image, name: videoImage, widget: image, required: false}]}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Tags", name: "tags", widget: "list",required: false}
 
   - name: "pages"

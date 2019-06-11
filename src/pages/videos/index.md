@@ -5,11 +5,7 @@ videolist:
   - videoImage: /img/unnamed-2.jpg
     videoUrl: 'https://www.youtube.com/embed/Ui3K20-2iQQ'
   - videoImage: /img/img_2694.jpg
-    videoUrl: >-
-      <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/OCdDqlbTPSA" frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope;
-      picture-in-picture" allowfullscreen></iframe>
+    videoUrl: 'https://www.youtube.com/embed/OCdDqlbTPSA'
 ---
 **UNDERCOVER**
 

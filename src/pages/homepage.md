@@ -1,14 +1,11 @@
 ---
 use_blog: false
 title: Homepage
-image: /img/dibbsy.jpg
+image: /img/dive-bell-press-image.jpg
 heading: Dive Bell
 intro:
   heading: '-'
-  description: |-
-    ## LISTEN TO NEW SINGLE 'SNOW' [HERE](http://hyperurl.co/divebellsnow)
-
-    ![](/img/maxresdefault.jpg)
+  description: '## NEW SINGLE ''LUPINE'' OUT 13/06/19'
 video:
   videoImage: /img/unnamed-2.jpg
   videoSource: 'https://www.youtube.com/embed/Ui3K20-2iQQ'

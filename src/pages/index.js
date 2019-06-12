@@ -46,7 +46,7 @@ export default class IndexPage extends React.Component {
                   }}
                 ></div>
               )}
-              {homepage.videoFeatured && (
+              {homepage.videoFeatured.videoSource && (
                 <Video
                   poster={
                     homepage.videoFeatured.videoImage.childImageSharp.fluid

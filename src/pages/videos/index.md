@@ -21,6 +21,6 @@ videolist:
 
 **LUPINE**
 
-**"A captivating single and accompanying video from Sydney experimental electronic rock quartet Dive Bell".**
+**"A captivating single and accompanying video from Sydney experimental electronic rock quartet Dive Bell"**
 
-****[**Sungenre 2019**](https://sungenre.com/premiere/dive-bell-lupine/)****
+[Sungenre 2019](<https://sungenre.com/premiere/dive-bell-lupine/)>)

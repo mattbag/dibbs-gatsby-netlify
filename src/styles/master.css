@@ -84,4 +84,5 @@ blockquote {
 
 .gatsby-image-wrapper {
     background-color: #000;
+    height: 100%;
 }

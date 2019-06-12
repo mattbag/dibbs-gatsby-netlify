@@ -3,13 +3,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import Img from "gatsby-image"
+import Img from "gatsby-image";
 
 import Layout from "../components/Layout";
 import Video from "../components/Video";
 import { css } from "emotion";
 
-const heading = css(tw`text-pink text-center text-4xl my-6`);
+const heading = css(tw`text-pink text-center text-3xl my-6`);
 // const bandImg = css(tw`w-md mx-auto my-2 block`);
 const block = css(tw`py-4 md:py-8`);
 const blog = {
@@ -24,18 +24,38 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.posts;
     const { edges: dates } = data.dates;
     const { edges: hp } = data.hp;
-    const homepage = hp[0].node.frontmatter
+    const homepage = hp[0].node.frontmatter;
     const USE_BLOG = homepage.use_blog;
 
-    // console.log(homepage)
+    // console.log(homepage);
 
     return (
       <Layout>
         <section className="section">
           <div className={block}>
             <Hr />
-            {/* <h2 className={heading}>Latest Video</h2> */}
-            {/* {console.log(homepage.video.videoImage.childImageSharp)} */}
+
+            <div className="content">
+              {homepage.intro && homepage.intro.heading && (
+                <h2 className={heading}>{homepage.intro.heading}</h2>
+              )}
+              {homepage.intro && homepage.intro.description && (
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: homepage.intro.description
+                  }}
+                ></div>
+              )}
+              {homepage.videoFeatured && (
+                <Video
+                  poster={
+                    homepage.videoFeatured.videoImage.childImageSharp.fluid
+                  }
+                  videoSource={homepage.videoFeatured.videoSource}
+                />
+              )}
+            </div>
+            <Hr />
             <Video
               poster={homepage.video.videoImage.childImageSharp.fluid}
               videoSource={homepage.video.videoSource}
@@ -43,10 +63,15 @@ export default class IndexPage extends React.Component {
 
             <div className="content">
               <Hr />
+
               <br />
-              {homepage.image && <Img fluid={homepage.image.childImageSharp.fluid} alt="Dive Bell" />}
-              {homepage.intro && homepage.intro.heading && <h2 className={heading}>{homepage.intro.heading}</h2>}
-              {homepage.intro && homepage.intro.description && <div dangerouslySetInnerHTML={{ __html: homepage.intro.description }}></div>}
+              {homepage.image && (
+                <Img
+                  fluid={homepage.image.childImageSharp.fluid}
+                  alt="Dive Bell"
+                />
+              )}
+
               <br />
               <Hr />
             </div>
@@ -86,16 +111,14 @@ export default class IndexPage extends React.Component {
                     rel="noopener noreferrer"
                   >
                     Info
-                    </a>
+                  </a>
                 )}
-                <Link to={post.fields.slug} style={{ float: 'right' }}>
+                <Link to={post.fields.slug} style={{ float: "right" }}>
                   Read more
-                  </Link>
+                </Link>
               </div>
             ))}
-            {USE_BLOG &&
-              <Hr />
-            }
+            {USE_BLOG && <Hr />}
             <br />
             {USE_BLOG &&
               posts.map(({ node: post }) => (
@@ -109,10 +132,12 @@ export default class IndexPage extends React.Component {
                   }}
                   key={post.id}
                 >
-                  <h3 style={{
-                    marginTop: 4,
-                    marginBottom: 0
-                  }}>
+                  <h3
+                    style={{
+                      marginTop: 4,
+                      marginBottom: 0
+                    }}
+                  >
                     <Link className={blog.postLink} to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
@@ -122,13 +147,9 @@ export default class IndexPage extends React.Component {
                     <small>{post.frontmatter.date}</small>
                   </h3>
 
-                  <p>
-                    {post.excerpt}
-                  </p>
+                  <p>{post.excerpt}</p>
 
-                  <Link to={post.fields.slug}>
-                    Keep Reading →
-                    </Link>
+                  <Link to={post.fields.slug}>Keep Reading →</Link>
                 </div>
               ))}
             <Hr />
@@ -152,7 +173,9 @@ IndexPage.propTypes = {
 // https://github.com/gatsbyjs/gatsby/issues/4769
 export const pageQuery = graphql`
   query IndexQuery {
-    hp: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/homepage.md/"}}) {
+    hp: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/homepage.md/" } }
+    ) {
       edges {
         node {
           id
@@ -161,15 +184,29 @@ export const pageQuery = graphql`
             title
             description
             heading
-            image{
+            intro {
+              heading
+              description
+            }
+            image {
               childImageSharp {
                 fluid(maxWidth: 1800) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
-            video{
-              videoImage{
+            videoFeatured {
+              videoImage {
+                childImageSharp {
+                  fluid(maxWidth: 1200) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              videoSource
+            }
+            video {
+              videoImage {
                 childImageSharp {
                   fluid(maxWidth: 1200) {
                     ...GatsbyImageSharpFluid_withWebp

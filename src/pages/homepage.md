@@ -11,7 +11,11 @@ video:
   videoSource: 'https://www.youtube.com/embed/Ui3K20-2iQQ'
 videoFeatured:
   videoImage: /img/img_2694.jpg
-  videoSource: 'https://youtu.be/OCdDqlbTPSA'
+  videoSource: >-
+    <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/OCdDqlbTPSA" frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope;
+    picture-in-picture" allowfullscreen></iframe>
 socials:
   email_link: 'mailto:divebellband@gmail.com'
   facebook_link: 'https://www.facebook.com/divebellband/'

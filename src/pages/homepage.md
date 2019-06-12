@@ -1,7 +1,7 @@
 ---
 use_blog: false
 title: Homepage
-image: /img/dive-bell-press-image.jpg
+image: /img/_mg_7574_hr.png
 heading: Dive Bell
 intro:
   heading: '-'

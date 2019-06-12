@@ -5,7 +5,11 @@ videolist:
   - videoImage: /img/unnamed-2.jpg
     videoUrl: 'https://www.youtube.com/embed/Ui3K20-2iQQ'
   - videoImage: /img/img_2694.jpg
-    videoUrl: 'https://youtu.be/OCdDqlbTPSA'
+    videoUrl: >-
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/OCdDqlbTPSA" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
 ---
 ### "The first ever clip from Dive Bell is a creative exploration of pleasure and pain, intimacy and the cinematic, the intoxicating and the elegiac.
 

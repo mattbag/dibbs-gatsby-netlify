@@ -4,8 +4,8 @@ title: Homepage
 image: /img/_mg_7574_hr.png
 heading: Dive Bell
 intro:
-  heading: '-'
-  description: '## NEW SINGLE ''LUPINE'' OUT 13/06/19'
+  heading: NEW SINGLE 'LUPINE' OUT 13/06/19
+  description: '##'
 video:
   videoImage: /img/unnamed-2.jpg
   videoSource: 'https://www.youtube.com/embed/Ui3K20-2iQQ'

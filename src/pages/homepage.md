@@ -16,7 +16,7 @@ socials:
   email_link: 'mailto:divebellband@gmail.com'
   facebook_link: 'https://www.facebook.com/divebellband/'
   instagram_link: 'https://www.instagram.com/dive_bell/'
-  music_link: 'https://open.spotify.com/artist/3EPYnpPHRKFE2q17CP904C'
+  music_link: 'https://gyro.lnk.to/Lupine'
   youtube_link: 'https://www.youtube.com/channel/UCDtKBxbGUYbbbcykSycbayA'
 ---
 

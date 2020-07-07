@@ -4,14 +4,14 @@ title: Homepage
 image: /img/_mg_7574_hr.png
 heading: Dive Bell
 intro:
-  heading: NEW SINGLE 'LUPINE' OUT NOW
+  heading: NEW SINGLE 'SLEEP' OUT NOW
   description: '##'
 video:
   videoImage: /img/unnamed-2.jpg
   videoSource: 'https://www.youtube.com/embed/Ui3K20-2iQQ'
 videoFeatured:
-  videoImage: /img/img_2694.jpg
-  videoSource: 'https://www.youtube.com/embed/OCdDqlbTPSA'
+  videoImage: /img/unnamed.png
+  videoSource: 'https://www.youtube.com/embed/fnDYNdJTMxg'
 socials:
   email_link: 'mailto:divebellband@gmail.com'
   facebook_link: 'https://www.facebook.com/divebellband/'

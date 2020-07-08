@@ -1,7 +1,7 @@
 ---
 use_blog: false
 title: Homepage
-image: /img/_mg_7574_hr.png
+image: /img/dive-bell-press-image.jpg
 heading: Dive Bell
 intro:
   heading: NEW SINGLE 'SLEEP' OUT NOW

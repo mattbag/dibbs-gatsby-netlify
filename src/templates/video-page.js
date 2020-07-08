@@ -9,11 +9,11 @@ export const VideosPageTemplate = ({
   title,
   videos,
   content,
-  contentComponent
+  contentComponent,
 }) => {
   const PageContent = contentComponent || Content;
 
-  const Hr = margin => <hr style={{ width: 100, margin: margin }} />;
+  const Hr = (margin) => <hr style={{ width: 100, margin: margin }} />;
 
   return (
     <section className="section section--gradient">
@@ -24,17 +24,19 @@ export const VideosPageTemplate = ({
               className="section"
               style={{ maxWidth: 800, margin: "auto", padding: "60 0" }}
             >
-              <h2>
-                {title}
-              </h2>
-              {Hr('0')}
+              <h2>{title}</h2>
+              {Hr("0")}
               <PageContent className="content" content={content} />
 
-              {videos.map((v,i) => (
-                <Video videoSource={v.videoUrl} poster={v.videoImage.childImageSharp.fluid} key={`listvideo_${i}`} />
+              {videos.map((v, i) => (
+                <Video
+                  videoSource={v.videoUrl}
+                  poster={v.videoImage.childImageSharp.fluid}
+                  key={`listvideo_${i}`}
+                />
               ))}
 
-              {Hr('20 auto')}
+              {Hr("20 auto")}
             </div>
           </div>
         </div>
@@ -46,7 +48,7 @@ export const VideosPageTemplate = ({
 VideosPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
-  contentComponent: PropTypes.func
+  contentComponent: PropTypes.func,
 };
 
 const VideosPage = ({ data }) => {
@@ -65,7 +67,7 @@ const VideosPage = ({ data }) => {
 };
 
 VideosPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 };
 
 export default VideosPage;
@@ -78,12 +80,12 @@ export const VideosPageQuery = graphql`
         title
         videolist {
           videoUrl
-          videoImage{
+          videoImage {
             childImageSharp {
-                fluid(maxWidth: 1200) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+              fluid(maxWidth: 1200) {
+                ...GatsbyImageSharpFluid
               }
+            }
           }
         }
       }

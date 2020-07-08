@@ -13,7 +13,7 @@ const heading = css(tw`text-pink text-center text-3xl my-6`);
 // const bandImg = css(tw`w-md mx-auto my-2 block`);
 const block = css(tw`py-4 md:py-8`);
 const blog = {
-  postLink: css(tw`serif text-md`)
+  postLink: css(tw`serif text-md`),
 };
 
 const Hr = () => <hr style={{ width: 60, margin: "20 auto" }} />;
@@ -42,7 +42,7 @@ export default class IndexPage extends React.Component {
               {homepage.intro && homepage.intro.description && (
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: homepage.intro.description
+                    __html: homepage.intro.description,
                   }}
                 ></div>
               )}
@@ -85,7 +85,7 @@ export default class IndexPage extends React.Component {
                   border: "1px solid white",
                   padding: "1rem 1.5rem 2rem 1.5rem",
                   margin: "0 auto 2rem auto",
-                  maxWidth: 400
+                  maxWidth: 400,
                 }}
                 key={post.id}
               >
@@ -104,7 +104,7 @@ export default class IndexPage extends React.Component {
                     style={{
                       borderBottom: "2px dashed white",
                       padding: ".35rem 0",
-                      marginRight: "1rem"
+                      marginRight: "1rem",
                     }}
                     href={post.frontmatter.eventUrl}
                     target="_blank"
@@ -128,14 +128,14 @@ export default class IndexPage extends React.Component {
                     border: "1px solid white",
                     padding: "1rem 1.5rem",
                     margin: "0 auto 2rem auto",
-                    maxWidth: 400
+                    maxWidth: 400,
                   }}
                   key={post.id}
                 >
                   <h3
                     style={{
                       marginTop: 4,
-                      marginBottom: 0
+                      marginBottom: 0,
                     }}
                   >
                     <Link className={blog.postLink} to={post.fields.slug}>
@@ -163,9 +163,9 @@ export default class IndexPage extends React.Component {
 IndexPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
+      edges: PropTypes.array,
+    }),
+  }),
 };
 // https://www.npmjs.com/package/gatsby-plugin-netlify-cms-paths
 // https://blog.alexluong.com/generate-gatsby-image-sharp-from-an-image-url/
@@ -191,7 +191,7 @@ export const pageQuery = graphql`
             image {
               childImageSharp {
                 fluid(maxWidth: 1800) {
-                  ...GatsbyImageSharpFluid_withWebp
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -199,7 +199,7 @@ export const pageQuery = graphql`
               videoImage {
                 childImageSharp {
                   fluid(maxWidth: 1200) {
-                    ...GatsbyImageSharpFluid_withWebp
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -209,7 +209,7 @@ export const pageQuery = graphql`
               videoImage {
                 childImageSharp {
                   fluid(maxWidth: 1200) {
-                    ...GatsbyImageSharpFluid_withWebp
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }

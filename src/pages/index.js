@@ -3,7 +3,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import Img from "gatsby-image";
+// import Img from "gatsby-image";
 
 import Layout from "../components/Layout";
 import Video from "../components/Video";
@@ -68,10 +68,11 @@ export default class IndexPage extends React.Component {
 
               <br />
               {homepage.image && (
-                <Img
-                  fluid={homepage.image.childImageSharp.fluid}
-                  alt="Dive Bell"
-                />
+                // <Img
+                //   fluid={homepage.image.childImageSharp.fluid}
+                //   alt="Dive Bell"
+                // />
+                <img src={homepage.image.publicURL} alt="Dive Bell" />
               )}
 
               <br />
@@ -191,6 +192,7 @@ export const pageQuery = graphql`
               description
             }
             image {
+              publicURL
               childImageSharp {
                 fluid(maxWidth: 1800) {
                   ...GatsbyImageSharpFluid

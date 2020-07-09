@@ -33,6 +33,7 @@ export const VideosPageTemplate = ({
                   videoSource={v.videoUrl}
                   poster={v.videoImage.childImageSharp.fluid}
                   key={`listvideo_${i}`}
+                  fallback={v.videoImage.publicURL}
                 />
               ))}
 
@@ -81,6 +82,7 @@ export const VideosPageQuery = graphql`
         videolist {
           videoUrl
           videoImage {
+            publicURL
             childImageSharp {
               fluid(maxWidth: 1200) {
                 ...GatsbyImageSharpFluid

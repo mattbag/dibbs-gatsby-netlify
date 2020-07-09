@@ -52,6 +52,7 @@ export default class IndexPage extends React.Component {
                     homepage.videoFeatured.videoImage.childImageSharp.fluid
                   }
                   videoSource={homepage.videoFeatured.videoSource}
+                  fallback={homepage.videoFeatured.videoImage.publicURL}
                 />
               )}
             </div>
@@ -59,6 +60,7 @@ export default class IndexPage extends React.Component {
             <Video
               poster={homepage.video.videoImage.childImageSharp.fluid}
               videoSource={homepage.video.videoSource}
+              fallback={homepage.video.videoImage.publicURL}
             />
 
             <div className="content">
@@ -197,6 +199,8 @@ export const pageQuery = graphql`
             }
             videoFeatured {
               videoImage {
+                absolutePath
+                publicURL
                 childImageSharp {
                   fluid(maxWidth: 1200) {
                     ...GatsbyImageSharpFluid
@@ -207,6 +211,8 @@ export const pageQuery = graphql`
             }
             video {
               videoImage {
+                absolutePath
+                publicURL
                 childImageSharp {
                   fluid(maxWidth: 1200) {
                     ...GatsbyImageSharpFluid

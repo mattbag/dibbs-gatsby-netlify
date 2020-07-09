@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "DIVE BELL"
+    title: "DIVE BELL",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -11,22 +11,22 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/pages`,
-        name: "pages"
-      }
+        name: "pages",
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/img`,
-        name: "images"
-      }
+        name: "images",
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/static/img`,
-        name: "uploads"
-      }
+        name: "uploads",
+      },
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
@@ -34,7 +34,14 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          `gatsby-plugin-netlify-cms-paths`,
+          // `gatsby-plugin-netlify-cms-paths`,
+          {
+            resolve: `gatsby-plugin-netlify-cms-paths`,
+            options: {
+              // Path to your Netlify CMS config file
+              cmsConfig: `/static/admin/config.yml`,
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -44,26 +51,26 @@ module.exports = {
               maxWidth: 800,
               linkImagesToOriginal: false,
               withWebp: true,
-              backgroundColor: 'pink',
-              quality: 70
+              backgroundColor: "pink",
+              quality: 70,
             },
           },
-      ]
-      }
+        ],
+      },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ['Cormorant Garamond']
-        }
-      }
+          families: ["Cormorant Garamond"],
+        },
+      },
     },
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`
-      }
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -74,12 +81,12 @@ module.exports = {
         background_color: `#0a0a0a`,
         theme_color: `#ffc0cb`,
         display: `standalone`,
-        icon: `src/img/icon.png` // This path is relative to the root of the site.
-      }
+        icon: `src/img/icon.png`, // This path is relative to the root of the site.
+      },
     },
     `gatsby-plugin-offline`,
-    "gatsby-plugin-netlify" // make sure to keep it last in the array
-  ]
+    "gatsby-plugin-netlify", // make sure to keep it last in the array
+  ],
 };
 
 // https://www.gatsbyjs.org/packages/gatsby-plugin-robots-txt/?=robo

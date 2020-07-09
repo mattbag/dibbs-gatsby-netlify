@@ -17,7 +17,7 @@ socials:
   facebook_link: 'https://www.facebook.com/divebellband/'
   instagram_link: 'https://www.instagram.com/dive_bell/'
   music_link: >-
-    https://gyro.lnk.to/SleepDIVEBELL?fbclid=IwAR3XCVsZ9Q-eB2xMj2B3u-XhYEzYZKvh5yun08QKPR995t0cehBVl0A3JMQ
+    https://open.spotify.com/artist/3EPYnpPHRKFE2q17CP904C?si=GpF8zMgQRoqnoJ_frH3ZlQ
   youtube_link: 'https://www.youtube.com/channel/UCDtKBxbGUYbbbcykSycbayA'
 ---
 

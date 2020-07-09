@@ -6,6 +6,8 @@ videolist:
     videoUrl: 'https://www.youtube.com/embed/Ui3K20-2iQQ'
   - videoImage: /img/img_2694.jpg
     videoUrl: 'https://www.youtube.com/embed/OCdDqlbTPSA'
+  - videoImage: /img/unnamed.png
+    videoUrl: 'https://www.youtube.com/embed/Ui3K20-2iQQ'
 ---
 **UNDERCOVER**
 
@@ -20,3 +22,9 @@ videolist:
 **"A captivating single and accompanying video from Sydney experimental electronic rock quartet Dive Bell"**
 
 [Sungenre 2019](<https://sungenre.com/premiere/dive-bell-lupine/)>)
+
+**SLEEP**
+
+**"Sydney’s best-kept secret, Dive Bell, have just released their latest track, Sleep. An immersive landscape of ambient and electronic sounds, frontwoman Aleesha Dibbs’ voice twists and turns at the centre of it all. There’s a beguiling horror to it – and it’s impossible to ever look away. Sleep comes with a video from up-and-coming Sydney director, Maya Luana."**
+
+[Happy Mag 2020](https://happymag.tv/watch-dive-bell-sleep/)

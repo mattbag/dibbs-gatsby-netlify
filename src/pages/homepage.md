@@ -4,7 +4,7 @@ title: Homepage
 image: /img/_mg_7574_hr.png
 heading: Dive Bell
 intro:
-  heading: NEW SINGLE 'SLEEP' OUT NOW
+  heading: DIVE BELL
   description: '##'
 video:
   videoImage: /img/unnamed-2.jpg

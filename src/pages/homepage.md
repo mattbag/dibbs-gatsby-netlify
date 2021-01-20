@@ -2,7 +2,7 @@
 use_blog: false
 title: Homepage
 image: /img/_mg_7574_hr.png
-heading: Dive Bell
+heading: ''
 intro:
   heading: DIVE BELL
   description: '##'

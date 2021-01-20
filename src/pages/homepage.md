@@ -4,7 +4,7 @@ title: Homepage
 image: /img/_mg_7574_hr.png
 heading: ''
 intro:
-  heading: DIVE BELL
+  heading: '> > > '
   description: '##'
 video:
   videoImage: /img/unnamed-2.jpg
